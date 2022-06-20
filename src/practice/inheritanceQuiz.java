@@ -131,7 +131,7 @@ class Rectangle extends Point {
 public class inheritanceQuiz {
 public static void main(String[] args) {
 	
-	/*
+	
 	Circle[] c = new Circle[3];
 	c[0] = new Circle(1,2,3);
 	c[1] = new Circle(2,2,4);
@@ -141,21 +141,61 @@ public static void main(String[] args) {
 		c[i].draw();
 		System.out.println();
 	}
-	Rectangle r = new Rectangle(3, 4, 3, 3);
-	r.draw();
-	*/
 	
-	Point[] p = new Point[5];
-	p[0] = new Circle(1,2,3);
-	p[1] = new Circle(2,2,4);
-	p[2] = new Circle(3,4,3);
-	p[3] = new Rectangle(1,2,3,4);
-	p[4] = new Rectangle(2,2,2,5);
+	Rectangle[] r = new Rectangle[3];
+	r[0] = new Rectangle(1, 2, 3, 4);
+	r[1] = new Rectangle(2, 2, 4, 4);
+	r[2] = new Rectangle(3, 6, 4, 3);
 	
-	for(int i=0;i<p.length;i++) {
-		System.out.println("[ 도형 "+ (i+1)+" ]");
-		p[i].draw();
+	for(int i=0; i<r.length;i++) {
+		r[i].draw();
 		System.out.println();
 	}
+	
+	
+	Point[] pArr = new Point[5];
+	pArr[0] = new Circle(1,2,3);
+	pArr[1] = new Circle(2,2,4);
+	pArr[2] = new Circle(3,4,3);
+	pArr[3] = new Rectangle(1,2,3,4);
+	pArr[4] = new Rectangle(2,2,2,5);
+	
+	for(int i=0;i<pArr.length;i++) {
+		System.out.println("[ 도형 "+ (i+1)+" ]");
+		pArr[i].draw();
+		System.out.println();
+	}
+	
+//-------------------------------------
+	int[] arr = { 1, 2, 3, 4, 5 };
+	
+	//for-each구문
+	
+	for(int n : arr) {
+		System.out.println( n );
+	}
+	
+	System.out.println("-----");
+	double[] dArr = {1.1, 2.2, 3.3, 4.4, 5.5 };
+	for( double d : dArr) {
+		System.out.println( d );
+	}
+	
+	//-------------------------------------
+
+	//circle[]에 대한 fo-each구문
+	for (Circle c1 : c) {
+		c1.draw();
+		System.out.println();
+	}
+	
+	for(Point p : pArr) {
+		p.draw();
+		System.out.println("-----------");
+	}
+	
+	
+	
+	
 }
 }
